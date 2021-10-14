@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+	--color1: #f1f5f8;
+	--color2: #f44336;
+	--color3: #fff;
+	--color4: #1b1717;
+	--color5: #333;
+	--color6: #e91e63;
+	--color7: #e0e0e0;
+	--color8: #009688;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	background: var(--color1);
+}
+.repos-container {
+	width: 60%;
+	margin: auto;
+}
+.get-repos {
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.get-repos input {
+	width: 80%;
+	padding: 2rem 1rem;
+	height: 55px;
+	font-size: 1.3rem;
+	color: var(--color4);
+	border: 0;
+}
+.get-repos input:focus {
+	outline: 2px solid var(--color2);
+}
+.get-repos .get-button {
+	color: var(--color3);
+	background: var(--color2);
+	margin-left: 0.5rem;
+	padding: 1rem;
+	height: 63px;
+	display: grid;
+	place-items: center;
+	width: 140px;
+	text-transform: capitalize;
+	font-size: 1.3rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+.show-data {
+	background: var(--color7);
+	width: 90%;
+	margin: 1rem auto;
+	padding: 1rem;
+}
+.show-data .repo-box {
+	background: var(--color3);
+	padding: 1rem;
+	box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.show-data .repo-box:not(:last-child) {
+	margin-bottom: 1rem;
+}
+.show-data .repo-box .repo-name {
+	display: inline-block;
+	font-size: 1.2rem;
+	color: var(--color4);
+}
+.show-data .repo-box .repo-link,
+.show-data .repo-box .stars {
+	float: right;
+	color: var(--color3);
+	margin-left: 0.5rem;
+	padding: 4px;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border-radius: 2px;
+}
+.show-data .repo-box .stars {
+	background-color: var(--color8);
+	width: 120px;
+}
+.show-data .repo-box .repo-link {
+	text-decoration: none;
+	background-color: var(--color6);
+	width: 70px;
+}
+@media screen and (max-width: 600px) {
+	.repos-container {
+		width: 100%;
+	}
+	.get-repos input,
+	.get-repos .get-button {
+		font-size: 1rem;
+	}
+	.show-data {
+		width: 90%;
+	}
+	.show-data .repo-box {
+		padding: 1rem 0.2rem;
+	}
+	.show-data .repo-box .repo-name {
+		font-size: 0.6rem;
+		font-weight: bold;
+	}
+	.show-data .repo-box .repo-link,
+	.show-data .repo-box .stars {
+		font-size: 6px;
+		margin-left: 1px;
+		width: 57px;
+		padding: 4px 0;
+	}
+}
